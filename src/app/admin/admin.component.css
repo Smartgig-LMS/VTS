@@ -1,0 +1,11 @@
+::ng-deep.mat-mdc-tab-labels{
+    background-color: cornflowerblue;
+    border-radius: 30px;
+    border-bottom: none;
+}
+::ng-deep.mat-mdc-tab.mdc-tab--active .mdc-tab__text-label{
+    color: white !important;
+}
+::ng-deep.mdc-tab-indicator{
+    display: none !important
+}

@@ -1,0 +1,20 @@
+.Numbers{
+    height: 360px;
+    overflow-y: hidden;
+}
+.Numbers:hover{
+    height: 360px;
+    overflow-y: auto;
+}
+.header{
+    color: white;
+    background-color: #2D7BBA;
+}
+.list-group-item{
+    border: 1px solid grey;
+    margin-bottom: 5px;
+}
+.arrow-icon{
+    font-size: 18px;
+    color: #2D7BBA;
+}

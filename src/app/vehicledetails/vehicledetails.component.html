@@ -1,0 +1,142 @@
+<div class="row w-100">
+    <div class="col-md-6 mb-2">
+        <div class="row row-cols-1 row-cols-md-2 g-4 ps-2">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header header d-flex justify-content-between"><span>Valid Vehicles</span> <i
+                            class="bi bi-box-arrow-up-right arrow-icon"></i></div>
+                    <div class="card-body">
+                        <ul class="list-group Numbers">
+                            <li class="list-group-item" style="color: #39AD06;" *ngFor="let number of carNumbers">
+                                {{number}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-header header d-flex justify-content-between"><span>Suspicious Vehicles</span><i
+                            class="bi bi-box-arrow-up-right arrow-icon"></i></div>
+                    <div class="card-body">
+                        <ul class="list-group Numbers">
+                            <li class="list-group-item " style="color: #E5B800;" *ngFor="let number of invalidNumbers">
+                                {{number}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-header header d-flex justify-content-between"><span>Under Review</span><i
+                            class="bi bi-box-arrow-up-right arrow-icon"></i></div>
+                    <div class="card-body">
+                        <ul class="list-group">
+                            <ul class="list-group Numbers">
+                                <li class="list-group-item" style="color: #E13E3E;"
+                                    *ngFor="let number of reviewNumbers">{{number}}</li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-header header d-flex justify-content-between"><span>Resolved</span><i
+                            class="bi bi-box-arrow-up-right arrow-icon"></i></div>
+                    <div class="card-body">
+                        <ul class="list-group ">
+                            <ul class="list-group Numbers">
+                                <li class="list-group-item" style="color:#7A7474" *ngFor="let number of reviewNumbers">
+                                    {{number}}</li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 ps-3">
+        <div class="card shadow rounded mb-2">
+            <div class="row p-4">
+                <div class="col mb-2">
+                    <ng-select [(ngModel)]="selectedState"  style="color:grey" [searchable]="true" (ngModelChange)="logSelectedId('state', selectedState)" [multiple]="false" placeholder="Select State">
+                        <ng-option *ngFor="let state of states" [value]="state.id" style="color:#2D7BBA">{{state.name}}</ng-option>
+                    </ng-select>
+                </div>
+                <div class="col mb-2">
+                    <ng-select [(ngModel)]="selectedDistrict" (ngModelChange)="logSelectedId('district', selectedDistrict)" [multiple]="false" placeholder="Select District">
+                        <ng-option *ngFor="let district of districts" [value]="district.id">{{district.name}}</ng-option>
+                    </ng-select>
+                </div>
+                <div class="col mb-2">
+                    <ng-select [(ngModel)]="selectedRegion" (ngModelChange)="logSelectedId('region', selectedRegion)" [multiple]="false" placeholder="Select Region">
+                        <ng-option *ngFor="let region of regions" [value]="region.id">{{region.name}}</ng-option>
+                    </ng-select>
+                </div>
+                <div class="col mb-2">
+                    <ng-select [(ngModel)]="selectedArea" (ngModelChange)="logSelectedId('area', selectedArea)" [multiple]="false" placeholder="Select Area">
+                        <ng-option *ngFor="let area of areas" [value]="area.id">{{area.name}}</ng-option>
+                    </ng-select>
+                </div>
+            </div>
+        </div>
+        <!-- <video width="675" height="450" autoplay loop controls> -->
+        <div class="card shadow rounded video-wrapper m-2">
+            <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <video autoplay loop controls class="responsive-video">
+                        <source src="../../assets/Vehicle detection, tracking, number plate recognition, speed calculation on RaspberrypiB4.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="carousel-item">
+                    <video autoplay loop controls class="responsive-video">
+                        <source src="../../assets/Vehicle detection, tracking, number plate recognition, speed calculation on RaspberrypiB4.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="carousel-item">
+                    <video autoplay loop controls class="responsive-video">
+                        <source src="../../assets/Vehicle detection, tracking, number plate recognition, speed calculation on RaspberrypiB4.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                </div>
+                <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button> -->
+              </div>
+            <!-- <video autoplay loop controls class="responsive-video">
+                <source src="../../assets/Vehicle detection, tracking, number plate recognition, speed calculation on RaspberrypiB4.mp4" type="video/mp4">
+            </video> -->
+        </div>
+            
+    </div>
+</div>
+
+<!-- <div class="card mt-2 p-2">
+
+    <div class="d-flex justify-content-between" style="margin-bottom: 5px;">
+        <div class="search">
+            <input type="text" class="form-control" (input)="onQuickFilterChanged()" id="quickFilter"
+                placeholder="search here.." />
+        </div>
+        <button class="btn btn-primary btn-sm" (click)="getCSV()">Export CSV</button>
+    </div>
+    <ag-grid-angular style="width:100%; height: 350px;" class="ag-theme-alpine" [editType]="editType"
+        [rowData]="rowData" [columnDefs]="columnDefs" (cellClicked)="showdata($event)"
+        (cellValueChanged)="onCellValueChanged($event)" (rowValueChanged)="onRowValueChanged($event)"
+        (gridReady)="onGridReady($event)" [suppressCopyRowsToClipboard]="true" [pagination]="true"
+        [paginationPageSize]="paginationPageSize" [paginationPageSizeSelector]="paginationPageSizeSelector"
+        [rowSelection]="rowSelection" [suppressRowClickSelection]="true"  [suppressExcelExport]="true"
+        (selectionChanged)="onSelectionChanged($event)">
+    </ag-grid-angular>
+</div> -->

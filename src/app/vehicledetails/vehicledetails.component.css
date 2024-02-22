@@ -1,0 +1,86 @@
+.Numbers{
+    height: 360px;
+    overflow: hidden;
+}
+.Numbers:hover{
+    height: 360px;
+    overflow: auto;
+}
+
+.header{
+    color: white;
+    background-color: #2D7BBA;
+}
+
+.arrow-icon{
+    font-size: large;
+    font-weight: 900;
+}
+.list-group-item{
+    border: 1px solid grey;
+    margin-bottom: 5px;
+}
+
+
+/* Mobile devices (phones, up to 767px) */
+@media (max-width: 767px) {
+    .Numbers {
+        height: 200px; 
+    }
+    .header{
+        text-overflow: ellipsis;
+    }
+    .carousel-item {
+        height: 350px;
+    }
+}
+
+/* Tablets (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .Numbers {
+        height: 180px; 
+        overflow: auto;
+    }
+    .header{
+        text-overflow: ellipsis;
+        height: 32px;
+    }
+    .carousel-item {
+        height: 350px;
+    }
+    /* .video-wrapper {
+        position: relative;
+        width: 100%;
+        padding-top: 56.25%; 
+        overflow: hidden;
+    }
+    
+    .video-wrapper video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    } */
+
+}
+
+/* Small laptops (1024px to 1439px) */
+@media (min-width: 1024px) and (max-width: 1439px) {
+    .Numbers {
+        height: 275px; 
+    }
+    .carousel-item {
+        height: 500px;
+    }
+}
+
+/* Desktops and larger screens (1440px and up) */
+@media (min-width: 1440px) {
+    .Numbers {
+        height: 360px; 
+    }
+    .carousel-item {
+        height: 500px;
+    }
+}

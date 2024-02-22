@@ -1,0 +1,16 @@
+
+<div #trigger (click)="togglePopup()" data-action="toggle" style="cursor: pointer;">
+    <i class="bi bi-three-dots-vertical" data-action="toggle"></i>
+</div>
+
+<div #content *ngIf="isOpen" class="menu-container">
+    <div class="menu-item tick" *ngIf="!deleteHoliday && !deleteEvent" (click)="onEditClick()">Edit</div>
+    <div class="menu-item tick" *ngIf="!deleteHoliday && !deleteEvent" (click)="onDeleteClick()">DeleteUser</div>
+    <div class="menu-item tick" *ngIf="deleteHoliday && !deleteEvent" (click)="onDeleteholiday()">Delete Holiday</div>
+    <div class="menu-item tick" *ngIf="deleteEvent" (click)="onDeleteevent()">Delete event</div>
+
+</div>
+
+
+  
+  

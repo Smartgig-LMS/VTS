@@ -1,0 +1,130 @@
+<!-- <div class="row" *ngIf="!Islogin">
+  <app-login></app-login>
+</div> -->
+<!-- *ngIf="Islogin" -->
+<nav class="navbar navbar-expand-lg bg-light" >
+  <div class="container-fluid">
+    <a class="navbar-brand"> <img src="../assets/VTS-logoo.png" alt="logo" srcset="" style="width: 75px;height: 60px;">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link " aria-current="page" [routerLink]="['/vehicle']"
+            routerLinkActive="router-link-active">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " aria-current="page" [routerLink]="['flagged']"
+            routerLinkActive="router-link-active">Flagged Vehicles</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " aria-current="page" [routerLink]="['/admin']"
+            routerLinkActive="router-link-active">Admin</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ms-auto mb-lg-0">
+        <li class="nav-item mb-2">
+          <div class="input-group">
+            <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+            <span class="input-group-text" id="basic-addon1"><i class=" icons bi bi-search"></i></span>
+          </div>
+        </li>
+        <li class="nav-item mb-2">
+          <div class="input-group">
+            <span class="input-group-text" id="basic-addon1"><i class="icons bi bi-calendar2-date-fill"></i></span>
+            <input type="text" class="form-control fontstyle" [value]="date" placeholder="Username"
+              aria-label="Username" disabled>
+          </div>
+        </li>
+        <li class="nav-item mb-2">
+          <div class="input-group">
+            <span class="input-group-text" id="basic-addon1"><i class="icons bi bi-clock-fill"></i></span>
+            <input type="text" class="form-control fontstyle" [value]="time" placeholder="Username"
+              aria-label="Username" disabled>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <mat-icon class="text-secondary dropdown-toggle mt-2" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false"> account_circle</mat-icon>
+          <!-- <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-person-circle"></i>
+          </a> -->
+          <ul class="dropdown-menu dropdown-menu-end mt-2">
+            <!-- <mat-icon class="icon">lock</mat-icon> -->
+            <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                  class="bi bi-lock icon"></i> Change password</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li>
+              <a class="dropdown-item" (click)="logout()"><i class="bi bi-box-arrow-right icon"></i> Logout</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- *ngIf="Islogin" -->
+<div class="container-fluid p-2" >
+  <router-outlet></router-outlet>
+</div>
+<!-- <mat-drawer-container class="example-container" autosize *ngIf="Islogin">
+  <mat-drawer #drawer class="example-sidenav p-1 mt-2">
+
+    <mat-list role="list">
+      <mat-list-item class="sidenav-menu" [routerLink]="['/admin']" routerLinkActive="router-link-active"
+        *ngIf="isAdmin=='Admin'">Admin</mat-list-item>
+      <mat-list-item class="sidenav-menu" [routerLink]="['/vehicle']"
+        routerLinkActive="router-link-active">Dashboard</mat-list-item>
+      <mat-list-item class="sidenav-menu" [routerLink]="['/demo']"
+        routerLinkActive="router-link-active">Demo</mat-list-item>
+    </mat-list>
+
+  </mat-drawer>
+  <mat-drawer-content class="p-4">
+  
+  </mat-drawer-content>
+</mat-drawer-container> -->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title fs-5" id="exampleModalLabel">Password change</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form #changepasswordform="ngForm" (ngSubmit)="changepassword(changepasswordform)">
+          <div class="mb-3">
+            <label for="oldpassword" class="form-label">Old Password</label>
+            <input type="text" class="form-control" id="oldpassword" name="oldPassword" minlength="8" ngModel
+              placeholder="old Password" required #oldPassword="ngModel">
+            <div *ngIf="oldPassword.invalid && (oldPassword.dirty || oldPassword.touched)" class="text-danger text-sm">
+              <div *ngIf="oldPassword.errors?.['required']">oldPassword is required.</div>
+              <div *ngIf="oldPassword.errors?.['minlength']">oldPassword must be at least 8 characters long.</div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="newpassword" class="form-label">New Password</label>
+            <input type="text" class="form-control" id="newpassword" minlength="8" name="newPassword" ngModel
+              placeholder="old Password" required #newPassword="ngModel">
+            <div *ngIf="newPassword.invalid && (newPassword.dirty || newPassword.touched)" class="text-danger text-sm">
+              <div *ngIf="newPassword.errors?.['required']">New Password is required.</div>
+              <div *ngIf="newPassword.errors?.['minlength']">New Password must be at least 8 characters long.</div>
+            </div>
+          </div>
+        </form>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary btn-sm" [disabled]="!changepasswordform.valid">Save
+            changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

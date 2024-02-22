@@ -1,0 +1,76 @@
+/* toolbar */
+mat-toolbar ,.navbar{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  
+  .mat-drawer-side{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-right-color: var(--mat-sidenav-container-divider-color);
+    border-right-width: 1px;
+    border-right-style: none;
+  }
+  
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+  
+  .example-container {
+    height: 95vh;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+  
+  /* sidenav */
+  .example-sidenav-content {
+    display: flex;
+    height: 100%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  
+  .example-sidenav {
+    padding: 20px;
+    width: 225px !important;
+  }
+
+  .nav-item .nav-link {
+    margin-left: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    color:#2D7BBA
+  }
+   .nav-item {
+    margin-left: 5px;
+  }
+  
+  ::ng-deep.mdc-list-item__primary-text{
+    color: #a7aeb8 !important;
+    font-size: small;
+  }
+  
+  /* ::ng-deep.mat-mdc-list-item, .router-link-active, .mdc-list-item__primary-text{
+    background: #000;
+    color: #12c2e9;
+  } */
+  
+  .router-link-active{
+    color:#00204C !important;
+    border-bottom: 2px solid #00204C;
+  }
+
+  .icons{
+    color:#2D7BBA
+  }
+  .fontstyle{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+  }
+
+  /* Assuming ::ng-deep if needed, be mindful of deprecation */
+::ng-deep .p-calendar .p-inputtext {
+  width: 200px; /* Adjust width as needed */
+  height: 40px; /* Adjust height as needed */
+}
+
+::ng-deep .p-calendar .p-datepicker-trigger {
+  height: 40px; 
+  line-height: 40px;
+}

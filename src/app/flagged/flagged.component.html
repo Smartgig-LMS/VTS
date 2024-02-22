@@ -1,0 +1,176 @@
+<div class="container-fluid">
+    <div class="row row-cols-1 row-cols-lg-2 ">
+        <div class="col mb-2">
+            <div class="row row-cols-1 row-cols-md-3 g-2 ps-2">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header header d-flex justify-content-between"><span>Andhra Pradesh</span> </div>
+                        <div class="card-body">
+                            <ul class="list-group Numbers">
+                                <li class="list-group-item" style="color: #B95BB5;" *ngFor="let number of carNumbers">
+                                    {{number}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header header d-flex justify-content-between"><span>Telangana</span></div>
+                        <div class="card-body">
+                            <ul class="list-group Numbers">
+                                <li class="list-group-item " style="color: #B95BB5;"
+                                    *ngFor="let number of invalidNumbers">
+                                    {{number}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header header d-flex justify-content-between"><span>TamilNadu</span></div>
+                        <div class="card-body">
+                            <ul class="list-group Numbers">
+                                <ul class="list-group Numbers">
+                                    <li class="list-group-item" style="color: #B95BB5;"
+                                        *ngFor="let number of reviewNumbers">{{number}}</li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header header d-flex justify-content-between"><span>Karnataka</span> </div>
+                        <div class="card-body">
+                            <ul class="list-group Numbers">
+                                <li class="list-group-item" style="color: #B95BB5;" *ngFor="let number of carNumbers">
+                                    {{number}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header header d-flex justify-content-between"><span>Maharastra</span></div>
+                        <div class="card-body">
+                            <ul class="list-group Numbers">
+                                <ul class="list-group Numbers">
+                                    <li class="list-group-item" style="color: #B95BB5;"
+                                        *ngFor="let number of reviewNumbers">
+                                        {{number}}</li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header header d-flex justify-content-between"><span>Bihar</span></div>
+                        <div class="card-body">
+                            <ul class="list-group Numbers">
+                                <li class="list-group-item " style="color: #B95BB5;"
+                                    *ngFor="let number of invalidNumbers">
+                                    {{number}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col">
+                    <div class="card">
+                        <div class="card-header header d-flex justify-content-between"><span>Kerala</span></div>
+                        <div class="card-body">
+                            <ul class="list-group Numbers">
+                                <ul class="list-group Numbers">
+                                    <li class="list-group-item" style="color: #B95BB5;"
+                                        *ngFor="let number of reviewNumbers">{{number}}</li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header header d-flex justify-content-between"><span>Orrisa</span></div>
+                        <div class="card-body">
+                            <ul class="list-group Numbers">
+                                <ul class="list-group Numbers">
+                                    <li class="list-group-item" style="color: #B95BB5;" *ngFor="let number of reviewNumbers">
+                                        {{number}}</li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <div class="col">
+            <div class="card rounded-4 ">
+                <div class="card-header header rounded-bottom rounded-4">  
+                    <div class="row gx-2 py-4">
+                        <div class="mb-3">
+                            <input type="text" class="form-control text-center" id="exampleFormControlInput1"
+                                placeholder="Enter Vehicle Number: XXXXXX">
+                        </div>
+                        <div class="col-6">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Recipient's username"
+                                    aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <span class="input-group-text" id="basic-addon2"><i class="bi bi-plus-circle-fill arrow-icon"></i></span>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Recipient's username"
+                                    aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <span class="input-group-text" id="basic-addon2"><i class="bi bi-dash-circle-fill arrow-icon"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 gx-3 p-4">
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Registrartion Number</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="BXW621" value="BXW621">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">RTO</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="RTOXYZ" value="RTOXYZ">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">VIN Number</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="XXX XXX 5267" value="XXX XXX 5267">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">RC Status</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Status" value="RTOXYZ" >
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Manufacturing Year</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="year" value="2022">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Primary Owner</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Primary Owner" value="Bailey">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Vehicle Model</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Vehicle Model" value="Benz E50">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Color</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Color" value="Blue">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Owner Address</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Door no : 3333, Robertson street, KGF, 517682" rows="3"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
