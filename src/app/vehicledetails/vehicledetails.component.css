@@ -1,10 +1,10 @@
 .Numbers{
     height: 360px;
-    overflow: hidden;
+    overflow-y: hidden;
 }
 .Numbers:hover{
     height: 360px;
-    overflow: auto;
+    overflow-y: auto;
 }
 
 .header{
@@ -25,7 +25,12 @@
 /* Mobile devices (phones, up to 767px) */
 @media (max-width: 767px) {
     .Numbers {
-        height: 200px; 
+        height: 200px;
+       overflow-y: hidden;
+    }
+    .Numbers:hover{
+        height: 200px;
+       overflow-y: auto;
     }
     .header{
         text-overflow: ellipsis;
@@ -38,15 +43,19 @@
 /* Tablets (768px to 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
     .Numbers {
-        height: 180px; 
-        overflow: auto;
+        height: 200px; 
+       overflow-y: hidden;
+    }
+    .Numbers:hover{
+        height: 200px;
+       overflow-y: auto;
     }
     .header{
         text-overflow: ellipsis;
         height: 32px;
     }
     .carousel-item {
-        height: 350px;
+        height: 400px;
     }
     /* .video-wrapper {
         position: relative;
@@ -69,9 +78,14 @@
 @media (min-width: 1024px) and (max-width: 1439px) {
     .Numbers {
         height: 275px; 
+       overflow-y: hidden;
+    }
+    .Numbers:hover{
+        height: 275px;
+       overflow-y: auto;
     }
     .carousel-item {
-        height: 500px;
+        height: 550px;
     }
 }
 
@@ -79,6 +93,11 @@
 @media (min-width: 1440px) {
     .Numbers {
         height: 360px; 
+       overflow-y: hidden;
+    }
+    .Numbers:hover{
+        height: 360px;
+       overflow-y: auto;
     }
     .carousel-item {
         height: 500px;
