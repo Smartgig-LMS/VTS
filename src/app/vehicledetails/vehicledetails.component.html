@@ -7,7 +7,7 @@
                             class="bi bi-box-arrow-up-right arrow-icon"></i></div>
                     <div class="card-body">
                         <ul class="list-group Numbers">
-                            <li class="list-group-item" style="color: #39AD06;" *ngFor="let number of carNumbers">
+                            <li class="list-group-item" style="color: #39AD06;" *ngFor="let number of carNumbers" (click)="showdetails('Valid Vehicles')">
                                 {{number}}</li>
                         </ul>
                     </div>
@@ -19,7 +19,7 @@
                             class="bi bi-box-arrow-up-right arrow-icon"></i></div>
                     <div class="card-body">
                         <ul class="list-group Numbers">
-                            <li class="list-group-item " style="color: #E5B800;" *ngFor="let number of invalidNumbers">
+                            <li class="list-group-item " style="color: #E5B800;" *ngFor="let number of invalidNumbers" (click)="showdetails('Suspicious Vehicles')">
                                 {{number}}</li>
                         </ul>
                     </div>
@@ -33,7 +33,7 @@
                         <ul class="list-group">
                             <ul class="list-group Numbers">
                                 <li class="list-group-item" style="color: #E13E3E;"
-                                    *ngFor="let number of reviewNumbers">{{number}}</li>
+                                    *ngFor="let number of reviewNumbers" (click)="showdetails('Under Review')">{{number}}</li>
                             </ul>
                         </ul>
                     </div>
@@ -46,7 +46,7 @@
                     <div class="card-body">
                         <ul class="list-group ">
                             <ul class="list-group Numbers">
-                                <li class="list-group-item" style="color:#7A7474" *ngFor="let number of reviewNumbers">
+                                <li class="list-group-item" style="color:#7A7474" *ngFor="let number of reviewNumbers" (click)="showdetails('Resolved')">
                                     {{number}}</li>
                             </ul>
                         </ul>

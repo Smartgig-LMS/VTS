@@ -8,11 +8,13 @@ import { AgGridModule } from 'ag-grid-angular';
 import { ShowDetailsComponent } from './show-details/show-details.component';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { FormsModule } from '@angular/forms';
+import { DisplayVehiclesComponent } from './display-vehicles/display-vehicles.component';
 
 @NgModule({
   declarations: [
     VehicledetailsComponent,
     ShowDetailsComponent,
+    DisplayVehiclesComponent,
   ],
   imports: [
     CommonModule,

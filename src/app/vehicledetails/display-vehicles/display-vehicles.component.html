@@ -1,0 +1,115 @@
+<div class="container py-3">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary rounded shadow border border-dark-subtle mb-3">
+        <div class="container-fluid ">
+            <a class="navbar-brand"> <img src="../assets/VTS-logoo.png" alt="logo" srcset=""
+                    style="width: 75px;height: 60px;"> <span class="navbar-brand1">{{data}}</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link">Telangana</a>
+                    <a class="nav-link">Wrangal</a>
+                    <a class="nav-link">HanumaKonda</a>
+                    <a class="nav-link">Subedari</a>
+                </div>
+                <div class="input-group w-50 px-4 btn-grp " (click)="closedialog()">
+                    <button type="submit" class="px-4 py-0 btn btn-sm backbutton"> Back</button>
+                    <button class="btn btn-sm backbutton " id="basic-addon1"><i
+                            class="bi bi-backspace-fill icon"></i></button>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+    <div class="row row-cols-1 row-cols-md-1 row-cols-lg-2 gx-3">
+        <div class=" col-xl-3 col-lg-4 col-md-12 mb-3">
+            <div class="card shadow rounded p-3">
+                <ul class="list-group text-center">
+                    <li class="list-group-item">A disabled item - XXX XXX 5286</li>
+                    <li class="list-group-item">A second item - XXX XXX 5286</li>
+                    <li class="list-group-item">A third item - XXX XXX 5286</li>
+                    <li class="list-group-item">A fourth item - XXX XXX 5286</li>
+                    <li class="list-group-item">And a fifth - XXX XXX 5286</li>
+                    <li class="list-group-item">And a Sixth - XXX XXX 5286</li>
+                </ul>
+            </div>
+        </div>
+        <div class=" col-xl-9  col-lg-8 col-md-12 ">
+            <div class="card rounded-4 ">
+                <div class="card-header header rounded-bottom rounded-3 py-4 text-center">
+                    Vehicle Details
+                </div>
+                <div class="card-body">
+                    <div class="row row-cols-1 row-cols-md-1 row-cols-lg-3 gx-3 px-3">
+                        <div class="col-lg-3">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Registrartion Number</label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1"
+                                    placeholder="BXW621" value="BXW621">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">VIN Number</label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1"
+                                    placeholder="XXX XXX 5267" value="XXX XXX 5267">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Manufacturing Year</label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="year"
+                                    value="2022">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Vehicle Model</label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1"
+                                    placeholder="Vehicle Model" value="Benz E50">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Color</label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1"
+                                    placeholder="Color" value="Blue">
+                            </div>
+
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">RTO</label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1"
+                                    placeholder="RTOXYZ" value="RTOXYZ">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">RC Status</label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1"
+                                    placeholder="Status" value="RTOXYZ">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Primary Owner</label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1"
+                                    placeholder="Primary Owner" value="Bailey">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label">Owner Address</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1"
+                                    placeholder="Door no : 3333, Robertson street, KGF, 517682" rows="4"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card" style="height: 400px;">
+                                <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.550163768876!2d78.38469997608041!3d17.433362501477266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91577843a5c1%3A0x7c5d66a2f56dfe4e!2sSanali%20Spazio!5e0!3m2!1sen!2sin!4v1706865370614!5m2!1sen!2sin"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-header header rounded-bottom rounded-3 py-4 text-center">
+                    Vehicle Details
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

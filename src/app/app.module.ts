@@ -36,7 +36,7 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
     MatTreeModule,
     ReactiveFormsModule
     ],
-  providers: [{ provide: MAT_DIALOG_DATA, useValue: {} }],
+  providers: [{ provide: MAT_DIALOG_DATA, useValue: {hasBackdrop:false} }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

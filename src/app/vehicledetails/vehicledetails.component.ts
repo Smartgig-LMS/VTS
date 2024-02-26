@@ -4,6 +4,7 @@ import { CellValueChangedEvent, ColDef, GridApi, RowValueChangedEvent } from 'ag
 import { MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition } from '@angular/material/snack-bar';
 import { ShowDetailsComponent } from './show-details/show-details.component';
 import { MatDialog } from '@angular/material/dialog';
+import { DisplayVehiclesComponent } from './display-vehicles/display-vehicles.component';
 
 @Component({
   selector: 'app-vehicledetails',
@@ -145,6 +146,15 @@ export class VehicledetailsComponent implements OnInit{
     this.shuffleArray(this.carNumbers);
     this.shuffleArray(this.invalidNumbers);
     this.shuffleArray(this.reviewNumbers);
+  }
+
+  showdetails(data:any){
+    // console.log(data);
+    let dialogRef = this.dialog.open(DisplayVehiclesComponent, {
+      width: '90%',
+      height: '90%',
+      data: data,
+    });
   }
 
   getvehical_Details() {
